@@ -16,8 +16,14 @@ double appbarHeight;
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    var widthScreen = MediaQuery.of(context).size.width;
-    var heightScreen = MediaQuery.of(context).size.height;
+    var widthScreen = MediaQuery
+        .of(context)
+        .size
+        .width;
+    var heightScreen = MediaQuery
+        .of(context)
+        .size
+        .height;
     AppBar appbar = new AppBar(
       backgroundColor: Color(0xef394f).withOpacity(1.0),
       title: Text(widget.title),
@@ -48,7 +54,6 @@ class _MainPageState extends State<MainPage> {
         drawer: Drawer(
           child: SingleChildScrollView(
             child: Column(children: <Widget>[
-
               Container(
                 alignment: Alignment.bottomRight,
                 padding: EdgeInsets.only(right: 16.0, bottom: 16.0),
@@ -111,7 +116,7 @@ class _MainPageState extends State<MainPage> {
                   height: 32.0,
                   child: Icon(Icons.arrow_right),
                   decoration: BoxDecoration(
-                    color: Colors.grey ,
+                    color: Colors.grey,
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -266,9 +271,9 @@ class _MainPageState extends State<MainPage> {
   wonderBox(widthScreen, heightScreen) {
     List products = [
       'موبایل سامسونگ GalaxyA80',
-      'ساعت هوشمند مدل M3',
-      'هودی مردانه بای نت',
-      'اسپری نظافت چند منظوره اکتیو',
+      'ساعت هوشمند مدل Smart-M3',
+      'هودی مردانه بای نت Double Colors',
+      'اسپری نظافت چند منظوره Active',
     ];
     return Column(children: <Widget>[
       Row(children: <Widget>[
@@ -348,15 +353,14 @@ class _MainPageState extends State<MainPage> {
                     height: 8.0,
                   ),
                   Container(
-
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
-                                'assets/images/product-wonderful-${index + 1}.png'))),
+                                'assets/images/product-wonderful-${index +
+                                    1}.png'))),
                     height: 120.0,
                   ),
                   Container(
-
                     margin: EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0),
                     alignment: Alignment.bottomRight,
                     child: Text(
@@ -404,28 +408,34 @@ class _MainPageState extends State<MainPage> {
 
   banner() {
     return new Container(
-      margin: EdgeInsets.symmetric(vertical: 32.0),
+      margin: EdgeInsets.symmetric(vertical: 16.0),
       child: Column(children: <Widget>[
         Container(
-          margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
-          child: ClipRRect(
-            child: Image.asset(
-              'assets/images/banner-wide-1.png',
+          margin: EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: new AssetImage(
+                  'assets/images/banner-wide-1.png'),
               fit: BoxFit.fill,
             ),
-            borderRadius: BorderRadius.circular(8.0),
+            border: Border.all(color: Colors.grey),
+            borderRadius:
+            BorderRadius.circular(8.0),
           ),
           height: 120.0,
           width: double.infinity,
         ),
         Container(
-          margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
-          child: ClipRRect(
-            child: Image.asset(
-              'assets/images/banner-wide-2.png',
+          margin: EdgeInsets.symmetric(vertical: 0.0, horizontal: 8.0),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: new AssetImage(
+                  'assets/images/banner-wide-2.png'),
               fit: BoxFit.fill,
             ),
-            borderRadius: BorderRadius.circular(8.0),
+            border: Border.all(color: Colors.grey),
+            borderRadius:
+            BorderRadius.circular(8.0),
           ),
           height: 120.0,
           width: double.infinity,
@@ -433,52 +443,71 @@ class _MainPageState extends State<MainPage> {
         Container(
             height: 120.0,
             width: double.infinity,
-            margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
+            margin: EdgeInsets.symmetric(vertical:16.0, horizontal: 4.0),
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ClipRRect(
-                    child: Image.asset(
-                      'assets/images/banner-small-1.png',
-                      fit: BoxFit.cover,
+                  child:
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 0.0,horizontal: 4.0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: new AssetImage(
+                            'assets/images/banner-small-1.png'),
+                        fit: BoxFit.fill,
+                      ),
+                      border: Border.all(color: Colors.grey),
+                      borderRadius:
+                      BorderRadius.circular(8.0),
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
                   ),
+
                 ),
-                SizedBox(
-                  width: 8.0,
-                ),
+
                 Expanded(
-                  child: ClipRRect(
-                    child: Image.asset(
-                      'assets/images/banner-small-2.png',
-                      fit: BoxFit.cover,
+                  child:
+                  Container(
+                    margin: EdgeInsets.symmetric( vertical: 0.0,horizontal: 4.0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: new AssetImage(
+                            'assets/images/banner-small-2.png'),
+                        fit: BoxFit.fill,
+                      ),
+                      border: Border.all(color: Colors.grey),
+                      borderRadius:
+                      BorderRadius.circular(8.0),
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
               ],
             )),
         Container(
-          margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
-          child: ClipRRect(
-            child: Image.asset(
-              'assets/images/banner-wide-3.png',
+          margin: EdgeInsets.symmetric(vertical: 0.0, horizontal: 8.0),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: new AssetImage(
+                  'assets/images/banner-wide-3.png'),
               fit: BoxFit.fill,
             ),
-            borderRadius: BorderRadius.circular(8.0),
+            border: Border.all(color: Colors.grey),
+            borderRadius:
+            BorderRadius.circular(8.0),
           ),
           height: 120.0,
           width: double.infinity,
         ),
         Container(
-          margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
-          child: ClipRRect(
-            child: Image.asset(
-              'assets/images/banner-wide-4.png',
+          margin: EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: new AssetImage(
+                  'assets/images/banner-wide-4.png'),
               fit: BoxFit.fill,
             ),
-            borderRadius: BorderRadius.circular(8.0),
+            border: Border.all(color: Colors.grey),
+            borderRadius:
+            BorderRadius.circular(8.0),
           ),
           height: 120.0,
           width: double.infinity,
@@ -486,28 +515,40 @@ class _MainPageState extends State<MainPage> {
         Container(
             height: 120.0,
             width: double.infinity,
-            margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
+            margin: EdgeInsets.symmetric(vertical: 0.0, horizontal: 4.0),
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ClipRRect(
-                    child: Image.asset(
-                      'assets/images/banner-small-3.png',
-                      fit: BoxFit.cover,
+                  child:
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 4.0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: new AssetImage(
+                            'assets/images/banner-small-3.png'),
+                        fit: BoxFit.fill,
+                      ),
+                      border: Border.all(color: Colors.grey),
+                      borderRadius:
+                      BorderRadius.circular(8.0),
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
-                SizedBox(
-                  width: 8.0,
-                ),
+
                 Expanded(
-                  child: ClipRRect(
-                    child: Image.asset(
-                      'assets/images/banner-small-4.png',
-                      fit: BoxFit.cover,
+                  child:
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 4.0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: new AssetImage(
+                            'assets/images/banner-small-4.png'),
+                        fit: BoxFit.fill,
+                      ),
+                      border: Border.all(color: Colors.grey),
+                      borderRadius:
+                      BorderRadius.circular(8.0),
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
               ],
@@ -520,7 +561,7 @@ class _MainPageState extends State<MainPage> {
     List popularProductsList = [
       'هندزفری وایرلس مدل TWS',
       'هدفون بی سیم نیا مدل Q8',
-      'کیف چرمی موبایل - آدین',
+      'کیف چرمی موبایل - Adin',
       'کاور سلیکونی موبایل مدل soft-touch',
     ];
 
@@ -572,7 +613,8 @@ class _MainPageState extends State<MainPage> {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
-                                'assets/images/product-popular-${index + 1}.png'))),
+                                'assets/images/product-popular-${index +
+                                    1}.png'))),
                     height: 120.0,
                   ),
                   Container(
@@ -623,10 +665,10 @@ class _MainPageState extends State<MainPage> {
 
   newProducts(widthScreen, heightScreen, {title = 'محصولات جدید'}) {
     List newProductsList = [
-      'کیف دوشی ردانه شهر چرم',
-      'کت مردانه دثار مدل 777',
+      'کیف دوشی مردانه شهر چرم مدل A45',
+      'کت مردانه مدل 777 Desar',
       'یخچال فریز امرسان مدل CLA',
-      'پیراهن مردانه زی مدل پوپلین',
+      'پیراهن مردانه زی مدل Poplin',
     ];
 
     return Column(children: <Widget>[
