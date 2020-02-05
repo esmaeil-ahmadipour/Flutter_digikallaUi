@@ -2,6 +2,8 @@
 
 A Simple Clone Digikalla Ui in Flutter application.
 
+![alt text](https://i.ibb.co/6JwzHLD/repository-flutter-digikalla-Ui.jpg)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
