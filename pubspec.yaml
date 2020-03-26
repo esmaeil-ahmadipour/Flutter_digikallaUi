@@ -20,6 +20,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_swiper: ^1.1.6
+  liquid_swipe: ^1.4.0
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
@@ -63,6 +65,10 @@ flutter:
     - assets/images/banner-small-2.png
     - assets/images/banner-small-3.png
     - assets/images/banner-small-4.png
+    - assets/images/ls-01.jpg
+    - assets/images/ls-02.jpg
+    - assets/images/ls-03.jpg
+    - assets/images/logo-digikala.png
     - assets/images/product-popular-1.png
     - assets/images/product-popular-2.png
     - assets/images/product-popular-3.png

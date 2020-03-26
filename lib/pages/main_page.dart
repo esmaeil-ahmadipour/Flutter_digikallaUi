@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 class MainPage extends StatefulWidget {
-  MainPage({Key key, this.title}) : super(key: key);
+  MainPage({Key key}) : super(key: key);
 
-  final String title;
+  final String title = "DIGIKALA";
 
   @override
   _MainPageState createState() => _MainPageState();
