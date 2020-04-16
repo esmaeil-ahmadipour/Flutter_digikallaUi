@@ -1,8 +1,8 @@
 # flutter_clone_digikalla_ui
 
-A Simple Clone Digikalla Ui in Flutter application.
+### A Simple Clone Digikalla Ui in Flutter application.
 
-![alt text](https://i.ibb.co/6JwzHLD/repository-flutter-digikalla-Ui.jpg)
+![alt text](https://i.ibb.co/6JwzHLD/repository-flutter-digikalla-Ui.jpg?sanitize=true&raw=true)
 
 ## Getting Started
 
